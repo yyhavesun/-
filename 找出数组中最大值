@@ -1,0 +1,16 @@
+# my-code
+#include<stdio.h>
+int main()
+{
+	int arr[10] = {-12,-56,-123,-4,-6,-64,-45,-2,-6,-3 };
+    int left = 0;
+    int sz = sizeof(arr) / sizeof(arr[0]);
+    int max = arr[0];
+    for (left = 1; left < sz; left++)
+{
+	if (max < arr[left])
+		max = arr[left];
+}
+printf("最大值=%d\n", max);
+return 0;
+}
