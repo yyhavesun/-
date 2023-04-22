@@ -16,3 +16,28 @@ int main()
 	printf("%d", ret);
 	return 0;
 }
+//40个以后递归时间太久。不递归的方法：可以快速求40个以后的
+#include<stdio.h>
+int Fib(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c=1;
+	while (n-2>0)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int n = 0;
+	printf("求第几个斐波那契:");
+	scanf("%d", &n);
+	int ret = Fib(n);
+	printf("%d", ret);
+	return 0;
+}
