@@ -1,0 +1,14 @@
+# my-code
+#define _CRT_SECURE_NO_WARNINGS 
+#include<stdio.h>
+//不用中间变量交换两个数
+int main()
+{
+	int a = 3;
+	int b = 5;
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+	printf("%d %d\n", a,b);
+	return 0;
+}
