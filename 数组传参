@@ -1,0 +1,24 @@
+# my-code
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+void test1(int arr[])
+{
+	//传进来第一个元素的地址；数组名本来就是指针变量。一个指针的大小是4/8个字节。
+	printf("%d\n", sizeof(arr));
+}
+void test2(char arr[])
+{
+	//传进来第一个元素的地址；数组名本来就是指针变量。一个指针的大小是4/8个字节。
+	printf("%d\n", sizeof(arr));
+}
+int main()
+{
+	int arr [10] = {1};
+	char ch[10] = {1};
+	printf("%d\n", sizeof(arr));
+	//一个字符的大小是1个字节。
+	printf("%d\n", sizeof(ch));
+	test1(arr);
+	test2(ch);
+	return 0;
+}
