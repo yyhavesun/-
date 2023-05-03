@@ -1,0 +1,32 @@
+# my-code
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<string.h>
+struct stu
+{
+	char name[20];
+	int age;
+	double score;
+};
+
+void set_stu(struct stu* ps)
+{
+	ps->age = 20;
+	ps->score = 100.0;
+	strcpy(ps->name, "zhangsan");
+	//结构体指针->成员。直接访问地址，不用做临时拷贝。
+	//ps->age等价于(*ps).age
+}
+
+void print_stu(struct stu s)
+{
+	printf("%s %d %lf\n", s.name, s.age, s.score);
+	//结构体对象.成员。形参是实参的临时拷贝
+}
+int main()
+{
+	struct stu s = { 0 };
+	set_stu(&s);
+	print_stu(s);
+	return 0;
+}
