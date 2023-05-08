@@ -1,0 +1,31 @@
+# my-code
+typedef struct stu
+{
+	char name[20];
+	short age;
+	char tele[12];
+	char sex[5];
+}stu;
+
+void print(stu s)
+{
+	printf("%s\n", s.name);
+	printf("%d\n", s.age);
+	printf("%s\n", s.tele);
+	printf("%s\n", s.sex);
+}
+
+void print2(stu* ps)
+{
+	printf("%s\n", ps->name);
+	printf("%d\n", ps->age);
+	printf("%s\n", ps->tele);
+	printf("%s\n", ps->sex);
+}
+int main()
+{
+	stu s = { "张三",15,"12334567457","男" };
+	print(s);
+	print2(&s);
+	return 0;
+}
