@@ -1,0 +1,14 @@
+# my-code
+int main()
+{
+	char ch = 0;
+	while (scanf("%c", &ch) == 1)
+	{
+		if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+			printf("%c是字母\n", ch);
+		else
+			printf("%c不是字母\n",ch);
+		getchar();
+	}
+	return 0;
+}
