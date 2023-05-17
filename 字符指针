@@ -1,0 +1,18 @@
+# my-code
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+//int main()
+//{
+//	//字符指针
+//	char* p = "abcdef";//指把字符串常量a的地址放入p中
+//	return 0;
+//}
+
+int main()
+{
+	char* a[] = { "work","at","alibaba" };
+	char** pa = a;
+	pa++;
+	printf("%s\n", *pa);
+	return 0;
+}
