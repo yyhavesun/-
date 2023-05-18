@@ -1,0 +1,29 @@
+# my-code
+int main()
+{
+	
+	int i = 0;
+	int sum = 0;
+	for (i = 0; i < 10000; i++)
+	{
+		//计算i的位数n
+		int n = 1;
+		int tmp = i;
+		while (tmp /= 10)
+		{
+			n++;
+		}
+		//求每一位的n次方之和
+		tmp = i;
+		while (tmp)
+		{
+			sum += pow(tmp % 10, n);
+			tmp /= 10;
+		}
+		//判断和是否等于i
+		if (sum == i)
+			printf("%d ", i);
+		sum = 0;
+	}
+	return 0;
+}
