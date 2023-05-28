@@ -1,0 +1,109 @@
+# my-code
+//设置默认对齐数4
+//#pragma pack(8)
+//
+//struct S1
+//{
+//	char c1;
+//	int a; 
+//	char c2;
+//};
+//
+//struct S2
+//{
+//	
+//	char c1;
+//	char c2;
+//	int a;
+//	
+//};
+//int main()
+//{
+//	struct S1 s1 = { 0 };
+//	printf("%d\n", sizeof(s1));
+//	struct S1 s2 = { 0 };
+//	printf("%d\n", sizeof(s2));
+//	return 0;
+//}
+
+//#include<stddef.h>
+//struct S
+//{
+//	char c;
+//	int i;
+//	double d;
+//
+//};
+//int main()
+//{
+//	printf("%d\n", offsetof(struct S, c));
+//	printf("%d\n", offsetof(struct S, i));
+//	printf("%d\n", offsetof(struct S, d));
+//	return 0;
+//}
+
+//struct S
+//{
+//	int a;
+//	char c;
+//	double d;
+//
+//};
+//
+//void Init(struct S* ps)
+//{
+//	ps->a = 100;
+//	ps->c = 'w';
+//	ps->d = 3.14;
+//}
+//
+//void Print(const struct S tmp)
+//{
+//	printf("%d", tmp.a);
+//}
+//int main()
+//{
+//	struct S s;
+//	/*s.a = 100;
+//	s.c = 'w';
+//	s.d = 3.14;*/
+//
+//	Init(&s);
+//	Print(s);
+//	return 0;
+//}
+
+//位段：二进制位
+//struct S
+//{
+//	int a : 2;
+//	int b : 5;
+//	int c : 10;
+//	int d : 30;
+//};
+//int main()
+//{
+//	struct S s;
+//	printf("%d\n", sizeof(s));
+//
+//	return 0;
+//}
+
+struct S
+{
+	char a : 3;
+	char b : 4;
+	char c : 5;
+	char d : 4;
+};
+int main()
+{
+
+	struct S s = { 0 };
+	s.a = 10;
+	s.b = 20;
+	s.c = 3;
+	s.d = 4;
+
+	return 0;
+}
