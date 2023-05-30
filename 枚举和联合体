@@ -1,0 +1,64 @@
+# my-code
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+//枚举
+//enum Sex
+//{
+//	MALE,
+//	FEMALE,
+//	SECRET
+//};
+//
+//enum Color
+//{
+//	RED,
+//	GREEN,
+//	BLUE
+//};
+//int main()
+//{
+//	enum Sex s = MALE;
+//	enum Color C = BLUE;
+//	return 0;
+//}
+
+//联合类型
+//union Un
+//{
+//	char c;
+//	int i;
+//}u;
+//
+//int check_sys()
+//{
+//	u.i = 1;
+//	return u.c;
+//}
+//int main()
+//{
+//	/*union Un u;*/
+//	/*printf("%p\n", &u);
+//	printf("%p\n", &u.c);
+//	printf("%p\n", &u.i);*/
+//	/*int a = 1;*/
+//	int ret = check_sys();
+//	if (1 == ret)
+//	{
+//		printf("小端\n");
+//	}
+//	else
+//		printf("大端\n");
+//	return 0;
+//}
+
+union Un
+{
+	int a;
+	char arr[5];
+};
+int main()
+{
+	union Un u;
+	printf("%d\n", sizeof(u));
+	return 0;
+}
