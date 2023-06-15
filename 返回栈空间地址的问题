@@ -1,0 +1,33 @@
+# my-code
+char* GetMemory(void)
+{
+	char p[] = "hello world";
+	return p;
+}
+void Test()
+{
+	char* str = NULL;
+	str = GetMemory();
+	printf(str);
+}
+
+int main()
+{
+	Test();
+	return 0;
+}
+局部变量p存在栈区，出了GetMemory即被销毁
+static	char p[] = "hello world"; 就可以
+
+int *test()
+{
+int* ptr=malloc(100);//堆区
+return ptr;
+}
+int main()
+{
+int *p=test();
+return 0;
+}
+
+ptr存在堆区，要free才能释放，这种方式就可以
